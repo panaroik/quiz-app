@@ -3,70 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
-</head>
-
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="./styles.css">
+<!-- <script src="./main.js"></script> -->
 </head>
 
-<body class="bg-gradient-to-r from-[#142a3e] via-[#07101e] to-[#142a3e] text-white text-center flex justify-center items-center min-h-screen px-6">
-    <div id="start-screen" class="space-y-10">
-        <div class="text-[10rem]">💻</div>
-        <div>
-            <h1 class="text-[2rem] font-semibold leading-[3rem]">Quiz App <br /> Test your CSS knowledge</h1>
-            <p class="max-w-[500px] mt-4 font-medium text-slate-300">Test your CSS knowledge with our quiz app and see if you're a true web design whiz!</p>
+<!-- Change code below this line -->
+
+<body class="body">
+    <div class="qa_box">
+        <div class="qa_header">
+            <span>Score: <span id="score">0</span></span>
+            <span id="contdown">0</span>
         </div>
-
-        <button id="start-btn" class="p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300">Start</button>
-    </div>
-
-    <div id="quiz-screen" class="hidden max-w-[37.5rem] w-full space-y-12">
-        <h1 class="text-[1.75rem] font-bold">Quiz App</h1>
-
-        <div class="flex flex-col gap-6">
-            <div class="flex items-center gap-2">
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
-                <div class="question-marker"></div>
+        <div class="qa_body">
+            <div class="qa_set active">
+                <h4>1. what does HTML stand for</h4>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a1" />
+                    <span>Hyperlinks and Text markup language</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a1" />
+                    <span>Home tool make up language</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a1" valid="valid" />
+                    <span>Hyper text makeup language</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a1" />
+                    <span>Cascading style sheet</span>
+                </div>
             </div>
-            <p id="question-position" class="self-end tracking-[0.03rem] font-semibold"><span class="text-blue-500">1</span>/10</p>
+            <div class="qa_set">
+                <h4>2. Choose the correct HTML elements for the largest heading</h4>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a2" />
+                    <span>&it;h6&gt</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a2" />
+                    <span>&it;head&gt</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a2" />
+                    <span>&it;heading&gt</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a2" valid="valid" />
+                    <span>&it;h1&gt</span>
+                </div>
+            </div>
+            <div class="qa_set">
+                <h4>3. what does CSS stand for</h4>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a3" />
+                    <span>Computer style sheet</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a3" />
+                    <span>Colorful style sheet</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a3" valid="valid" />
+                    <span>Cascading style sheet</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a3" />
+                    <span>Creative style sheet</span>
+                </div>
+            </div>
+            <div class="qa_set">
+                <h4>4. How do you display hiperlink without an underline</h4>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a4" />
+                    <span>a {decoration:no-underline} </span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a4" />
+                    <span>a {:no-underline}</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a4" valid="valid" />
+                    <span>a {Text-decoration:none}</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a4" />
+                    <span>a {decoration:no-underline}</span>
+                </div>
+            </div>
+            <div class="qa_set">
+                <h4>5. How do you dcreate a function in javascript</h4>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a5" />
+                    <span>function:myFunction() </span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a5" />
+                    <span>function = myFunction()</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a5" valid="valid" />
+                    <span>function myFunction()</span>
+                </div>
+                <div class="qa_ans_row">
+                    <input type="radio" name="a5" />
+                    <span>function ==myFunction()</span>
+                </div>
+            </div>
+            <div class="qa_set">
+                <h4>Your total score <span id="totalscore">0</span></span> Out of 100</h4>
+            </div>
         </div>
-
-        <div class="space-y-10">
-            <h2 id="question" class="text-[2rem]">Question Goes Here</h2>
-            <div id="answer-buttons" class="flex flex-col gap-[1.5rem] mt-[3.5rem]"></div>
-
-            <button id="submit-btn" class="p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300" disabled>Submit</button>
-            <button id="next-btn" class="hidden p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300">Next</button>
+        <div class="qa_footer">
+            <span class="btn1" id="skip">Skip</span>
         </div>
     </div>
-
-    <div id="score-screen" class="hidden space-y-16">
-        <h1 class="text-[1.75rem] font-bold">Quiz App</h1>
-
-
-        <div class="text-[10rem]">🎉</div>
-
-        <div class="text-[2rem] font-semibold leading-[3rem]">
-            <h3>Congratulations!</h3>
-            <h3 id="score-text"></h3>
-        </div>
-
-        <button id="reset-btn" class="underline font-medium">Take another quiz</button>
-    </div>
-        <script src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
+<!-- Change code above this line -->
 
 </html>
