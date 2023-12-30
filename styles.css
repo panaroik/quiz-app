@@ -1,49 +1,108 @@
-/* * {
-    outline: 1px solid red;
-} */
-
-body {
-    font-family: 'Nunito', sans-serif;
+/* Add CSS here */
+.body {
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    background-color: orange;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
 }
 
-.question-marker {
-    background-color: #384150;
-    border-radius: 0.125rem;
-    height: 0.3125rem;
-    flex: 1 0 0;
+.qa_box {
+    width: 500px;
+    padding: 20px;
+    min-height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 0.9em;
 }
 
-.question-marker.progress {
-    background-color: #4C8EF2;
+.qa_header {
+    background-color: orangered;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin: -20px -20px 20px;
+    border-radius: 15px 15px 0 0;
+    font-size: 20px;
 }
 
-.answer-button {
-    background-color: #384150;
-    border: 1px solid #4D5564;
-    border-radius: 0.5rem;
-    padding: 1.5rem 2.38rem;
+.qa_set {
+    display: none;
 }
 
-.answer-button:hover:not([disabled]) {
-    background-color: #4D5564;
+.qa_set.active {
+    display: block;
 }
 
-.answer-button:disabled,
-#submit-btn:disabled {
-    cursor: no-drop;
+.qa_set h4 {
+    margin: 0 0 15px;
+    font-size: 20px;
 }
 
-.answer-button.selected {
-    background-color: #6B7280;
-    border-color: #9CA3AF;
+.qa_ans_row {
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.answer-button.correct {
-    background-color: #53AF71;
-    border-color: #6FCA8F;
+.qa_ans_row input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.answer-button.incorrect {
-    background-color: #DE5242;
-    border-color: #E9786C;
+.qa_ans_row span {
+    display: block;
+    padding: 8px 15px;
+    border-radius: 1em;
+    background-color: #bad0c9;
+    transition: all 0.3s ease-out;
+}
+
+.qa_ans_row:hover span {
+    background-color: #9ab5ac;
+
+}
+
+.qa_ans_row input:checked+span {
+    background-color: red;
+}
+
+.qa_ans_row input[valid]:checked+span {
+    background-color: green;
+}
+
+.qa_footer {
+    padding: 10px 0 0;
+    text-align: right;
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: orange;
+    color: white;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn1:hover {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: orangered;
+    color: white;
+    border-radius: 0.4em;
+    transform: scale(0.96);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
