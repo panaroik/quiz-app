@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body class="bg-gradient-to-r from-[#142a3e] via-[#07101e] to-[#142a3e] text-white text-center flex justify-center items-center min-h-screen px-6">
+    <div id="start-screen" class="space-y-10">
+        <div class="text-[10rem]">💻</div>
+        <div>
+            <h1 class="text-[2rem] font-semibold leading-[3rem]">Quiz App <br /> Test your CSS knowledge</h1>
+            <p class="max-w-[500px] mt-4 font-medium text-slate-300">Test your CSS knowledge with our quiz app and see if you're a true web design whiz!</p>
+        </div>
+
+        <button id="start-btn" class="p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300">Start</button>
+    </div>
+
+    <div id="quiz-screen" class="hidden max-w-[37.5rem] w-full space-y-12">
+        <h1 class="text-[1.75rem] font-bold">Quiz App</h1>
+
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center gap-2">
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+                <div class="question-marker"></div>
+            </div>
+            <p id="question-position" class="self-end tracking-[0.03rem] font-semibold"><span class="text-blue-500">1</span>/10</p>
+        </div>
+
+        <div class="space-y-10">
+            <h2 id="question" class="text-[2rem]">Question Goes Here</h2>
+            <div id="answer-buttons" class="flex flex-col gap-[1.5rem] mt-[3.5rem]"></div>
+
+            <button id="submit-btn" class="p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300" disabled>Submit</button>
+            <button id="next-btn" class="hidden p-[1rem_2rem] rounded-lg bg-blue-500 font-semobold hover:bg-blue-600 transition duration-300">Next</button>
+        </div>
+    </div>
+
+    <div id="score-screen" class="hidden space-y-16">
+        <h1 class="text-[1.75rem] font-bold">Quiz App</h1>
+
+
+        <div class="text-[10rem]">🎉</div>
+
+        <div class="text-[2rem] font-semibold leading-[3rem]">
+            <h3>Congratulations!</h3>
+            <h3 id="score-text"></h3>
+        </div>
+
+        <button id="reset-btn" class="underline font-medium">Take another quiz</button>
+    </div>
+</body>
+
+</html>
